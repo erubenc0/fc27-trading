@@ -39,7 +39,7 @@ def plausible(platform_prices):
     if len(p) < 8:
         return False
     # 91s cost several times more than 90s in FC27; FC25 pages showed them close together.
-    if "91" in p and "90" in p and p["91"] < 1.8 * p["90"]:
+    if "91" in p and "90" in p and p["91"] < 1.5 * p["90"]:
         return False
     # Prices should broadly climb with rating.
     if "85" in p and "88" in p and p["88"] <= p["85"]:
